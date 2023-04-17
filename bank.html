@@ -1,18 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Bank inside</title>
     <script src="https://cdn.tailwindcss.com"></script>
-</head>
-<body>
+  </head>
+  <body class="bg-indigo-200 mx-auto">
     <header>
-        <h1 class="text-center mt-5 text-7xl">
-          Let's get some  <span class="text-rose-500 text-semibold">Mooooneeeyyy!!!</span>
-        </h1>
-      </header>
+      <h1
+        class="text-strong text-7xl text-center italic text-blue mt-12 text-semibold"
+      >
+        Paisa hi paisa hoga!!
+      </h1>
+      <h1 class="text-center mt-5 text-7xl italic">
+        Let's get some
+        <span class="text-rose-500 text-semibold italic"
+          >Paiiiiisssaaaaaa!!!</span
+        >
+      </h1>
+    </header>
 
-</body>
+    <main>
+      <section class="mt-12">
+        <div
+          class="grid grid-cols-3 gap-5 w-9/12 p-8 mx-auto text-white rounded-xl"
+        >
+          <div class="bg-fuchsia-800 p-8 rounded-xl">
+            <h4 class="text-2xl font-semibold">Deposite</h4>
+            <h2 class="text-5xl">$<span id="deposite-total">00</span></h2>
+          </div>
+
+          <div class="bg-teal-700 p-8 rounded-xl">
+            <h4 class="text-2xl font-semibold">Withdraw</h4>
+
+            <h2 class="text-5xl">$<span id="total-withdraw">00</span></h2>
+          </div>
+
+          <div class="bg-purple-800 p-8 rounded-xl">
+            <h4 class="text-2xl font-semibold">Balance</h4>
+            <h2 class="text-5xl">$<span id="total-balance">1240</span></h2>
+          </div>
+        </div>
+      </section>
+
+      <!-- Withdraw and Deposite  -->
+      <section class="mt-12 mb-15 px-6">
+        <div class="grid grid-cols-2 gap-4 mx-auto w-9/12">
+          <div class="bg-zinc-500 p-8 text-2xl rounded-xl">
+            <h4 class="text-2xl mb-2 text-white font-semibold">
+              Please Deposite
+            </h4>
+            <input
+              class="block w-9/12 py-1 mb-2 px-4 bg-stone-200 italic rounded-xl"
+              type="text"
+              name=""
+              id="deposite-amount"
+              placeholder="$ amount you want to Deposite"
+            />
+
+            <button
+              class="bg-green-400 px-6 py-2 text-2xl rounded-xl font-semibold text-white hover:bg-violet-600 mt-1"
+              id="btn-deposite"
+            >
+              Deposite
+            </button>
+          </div>
+
+          <div class="bg-lime-900 p-8 text-2xl rounded-xl">
+            <h4 class="text-2xl mb-2 text-white font-semibold">
+              Please Withdraw
+            </h4>
+
+            <input
+              class="block w-9/12 italic py-1 mb-2 px-4 bg-stone-200 rounded-xl"
+              type="text"
+              name=""
+              id="withdraw-amount"
+              placeholder="$ amount you want to Withdraw"
+            />
+
+            <button
+              class="bg-green-400 px-6 py-2 text-2xl rounded-xl font-semibold text-strong text-white hover:bg-blue-600 mt-1"
+              id="btn-withdraw"
+            >
+              Withdraw
+            </button>
+          </div>
+        </div>
+      </section>
+      
+      <footer class="mx-auto text-center text-fuchsia-800 italic mt-12 mb-12">
+        <small class="text-3xl text-center mx-auto  text-blue text-bold"> ~Powered by Ammur Hotel~</small>
+
+      </footer>
+      <script src="./js/deposite.js"></script>
+      <script src="./js/withdraw.js"></script>
+    </main>
+  </body>
 </html>
