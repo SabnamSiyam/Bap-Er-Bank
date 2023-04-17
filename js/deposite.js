@@ -1,5 +1,6 @@
 // Deposite Sector0---------->>>>>>>
 // its for deposite  btn only---->>>>
+// selecting the deposite button using id and added the addEventListener("click", function) ---->>>>>
 let depositeBalance = 0;
 document.getElementById("btn-deposite").addEventListener("click", function () {
   const depositeField = document.getElementById("deposite-amount");
@@ -12,9 +13,18 @@ document.getElementById("btn-deposite").addEventListener("click", function () {
   // console.log(depositeBalance);
   const currentDeposite = depositeBalance + depositeAmount;
 
+  // making emty the input field---->>>>>>>
+  depositeField.value = "";
+
+  // invalid number alert --------->>>>>>>>
+  if (isNaN(depositeAmount)) {
+    alert("Are bolod Valid takar amount input de age!!!");
+    return;
+  }
+  // setting current total deposite balance by setting innerText
   depositeTotal.innerText = currentDeposite;
 
-  // now need to add the deposit to the total balance
+  // now need to add the deposit to the total balance---->>>>
 
   const balanceField = document.getElementById("total-balance");
   const balanceString = balanceField.innerText;
@@ -26,7 +36,6 @@ document.getElementById("btn-deposite").addEventListener("click", function () {
   balanceField.innerText = TotalBalance;
   console.log(currentDeposite, TotalBalance);
 
-  depositeField.value = "";
   // console.log(depositeAmount);
 });
 

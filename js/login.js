@@ -1,3 +1,4 @@
+// login process
 document.getElementById("btn-submit").addEventListener("click", function () {
   const emailField = document.getElementById("input-email");
   const email = emailField.value;

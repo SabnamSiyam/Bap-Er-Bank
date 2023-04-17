@@ -24,13 +24,23 @@ document.getElementById("btn-withdraw").addEventListener("click", function () {
   // showing the current balance-->>>
   const totalAvailableBalance = balance - withdrawAmount;
 
+  // making emty the input value field---->>>>>>
   withdrawField.value = "";
 
-  console.log(totalWithdraw, totalAvailableBalance);
-  if (totalWithdraw > totalAvailableBalance) {
+  // invalid number alert --------->>>>>>>>
+  if (isNaN(withdrawAmount)) {
+    alert("Are bolod Valid takar amount input de age!!!");
+    return;
+  }
+
+  //  gives alert if the amout of Withdraw in more than the current Balance----->>>>>
+
+  console.log(withdrawAmount, totalAvailableBalance);
+  if (withdrawAmount > balance) {
     alert("Ore fokirer ghorer fokir re!!!! Tor Bap Er Bank a Ato taka nai!!");
     return;
   }
+  // setting the total current balance by setting innertext ------>>>
 
   TotalBalance.innerText = totalAvailableBalance;
 
